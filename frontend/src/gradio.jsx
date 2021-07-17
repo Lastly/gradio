@@ -10,6 +10,7 @@ import logo_error from './static/img/logo_error.png'
 import('./themes/defaults.scss');
 import('./themes/huggingface.scss');
 import('./themes/compact.scss');
+import('./themes/architext.scss')
 
 export class GradioInterface extends React.Component {
   constructor(props) {
@@ -92,7 +93,7 @@ export class GradioInterface extends React.Component {
       }
       for (let i = 0; i < this.props.output_components.length; i++) {
         component_state["output_data"].push(this.state[this.props.input_components.length + i]);
-      }  
+      }
     }
     this.setState({ "just_flagged": true });
     window.setTimeout(() => {
