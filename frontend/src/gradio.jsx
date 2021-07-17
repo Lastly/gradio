@@ -10,7 +10,7 @@ import logo_error from './static/img/logo_error.png'
 import('./themes/defaults.scss');
 import('./themes/huggingface.scss');
 import('./themes/compact.scss');
-import('./themes/architext.scss')
+import('./themes/architext.scss');
 
 export class GradioInterface extends React.Component {
   constructor(props) {
