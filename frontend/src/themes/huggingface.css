@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.gradio_page {
+  @apply container mx-auto my-4; }
+  .gradio_page .title {
+    @apply text-center p-4 text-4xl; }
+  .gradio_page .description {
+    @apply pb-4; }
+  .gradio_page .article {
+    @apply pt-8 pb-4 max-w-none; }
+
+.gradio_interface[theme="huggingface"] {
+  /* Input Components */
+  /* Output Components */ }
+  .gradio_interface[theme="huggingface"] .loading {
+    @apply absolute right-1; }
+  .gradio_interface[theme="huggingface"] .loading img {
+    @apply h-5; }
+  .gradio_interface[theme="huggingface"] .panels {
+    @apply flex flex-wrap justify-center gap-4; }
+  .gradio_interface[theme="huggingface"] .panel {
+    @apply flex-1; }
+  .gradio_interface[theme="huggingface"] .component_set {
+    @apply border border-gray-100 p-4 rounded-lg flex flex-col gap-3 bg-gradient-to-br from-gray-50 to-white; }
+  .gradio_interface[theme="huggingface"] .panel_header {
+    @apply flex items-center text-sm text-gray-700 mb-1.5; }
+  .gradio_interface[theme="huggingface"] .panel_button {
+    @apply shadow-sm font-semibold border flex-grow p-3 rounded-lg transition bg-gradient-to-b from-gray-50 hover:from-gray-100 to-gray-100 focus:ring-offset-indigo-300; }
+  .gradio_interface[theme="huggingface"] .panel_buttons {
+    @apply flex gap-4 my-4; }
+  .gradio_interface[theme="huggingface"] .submit {
+    @apply bg-red-500 hover:bg-red-400 transition px-4 py-2 rounded text-white font-semibold cursor-pointer mt-4; }
+  .gradio_interface[theme="huggingface"] .flag {
+    @apply relative; }
+    .gradio_interface[theme="huggingface"] .flag .dropcontent {
+      @apply hidden absolute top-8 left-0 bg-white border-gray-200 border-2 w-full; }
+      .gradio_interface[theme="huggingface"] .flag .dropcontent div {
+        @apply p-2; }
+      .gradio_interface[theme="huggingface"] .flag .dropcontent div:hover {
+        @apply bg-gray-100; }
+  .gradio_interface[theme="huggingface"] .flag:hover:not(.disabled) .dropcontent {
+    @apply block; }
+  .gradio_interface[theme="huggingface"] .screenshot_set {
+    @apply hidden flex hidden flex-grow; }
+  .gradio_interface[theme="huggingface"] .panel_button.left_panel_button {
+    @apply rounded-tr-none rounded-br-none; }
+  .gradio_interface[theme="huggingface"] .panel_button.right_panel_button {
+    @apply rounded-tl-none rounded-bl-none bg-gray-100 hover:bg-gray-300; }
+  .gradio_interface[theme="huggingface"] .examples h4 {
+    @apply text-lg font-semibold my-2; }
+  .gradio_interface[theme="huggingface"] .examples .examples_control {
+    @apply hidden flex hidden gap-2; }
+  .gradio_interface[theme="huggingface"] .examples .examples_control_left {
+    @apply flex gap-2; }
+  .gradio_interface[theme="huggingface"] .examples .shortcut {
+    @apply block text-xs; }
+  .gradio_interface[theme="huggingface"] .examples .examples_control button {
+    @apply bg-gray-100 hover:bg-gray-200 p-2; }
+  .gradio_interface[theme="huggingface"] .examples .examples_table {
+    @apply table-auto p-2 bg-gray-50 mt-4 rounded; }
+    .gradio_interface[theme="huggingface"] .examples .examples_table tbody tr {
+      @apply cursor-pointer; }
+    .gradio_interface[theme="huggingface"] .examples .examples_table thead {
+      @apply border-b-2 border-gray-300; }
+    .gradio_interface[theme="huggingface"] .examples .examples_table tbody tr:hover {
+      @apply bg-indigo-500 text-white; }
+    .gradio_interface[theme="huggingface"] .examples .examples_table tbody tr.selected {
+      @apply font-bold; }
+    .gradio_interface[theme="huggingface"] .examples .examples_table td,
+    .gradio_interface[theme="huggingface"] .examples .examples_table th {
+      @apply py-2 px-4; }
+  .gradio_interface[theme="huggingface"] .input_text textarea {
+    @apply w-full p-3 border rounded-lg shadow-inner outline-none focus:ring-1 focus:ring-inset focus:ring-indigo-200 focus:shadow-inner placeholder-gray-400; }
+  .gradio_interface[theme="huggingface"] .input_text input {
+    @apply w-full p-3 border rounded-lg shadow-inner outline-none focus:ring-1 focus:ring-inset focus:ring-indigo-200 focus:shadow-inner placeholder-gray-400; }
+  .gradio_interface[theme="huggingface"] .input_text .interpretation .interpretation_box {
+    @apply inline-block whitespace-pre-wrap; }
+  .gradio_interface[theme="huggingface"] .input_number input {
+    @apply w-full p-3 border rounded-lg shadow-inner outline-none focus:ring-1 focus:ring-inset focus:ring-indigo-200 focus:shadow-inner placeholder-gray-400; }
+  .gradio_interface[theme="huggingface"] .input_number .interpretation {
+    @apply flex h-6; }
+    .gradio_interface[theme="huggingface"] .input_number .interpretation .interpretation_box {
+      @apply flex-grow; }
+  .gradio_interface[theme="huggingface"] .input_image {
+    @apply w-full h-80 relative; }
+    .gradio_interface[theme="huggingface"] .input_image .upload_zone {
+      @apply border-8 border-gray-300 border-dashed w-full h-full flex justify-center items-center text-3xl text-gray-400 text-center cursor-pointer leading-10; }
+    .gradio_interface[theme="huggingface"] .input_image .image_preview_holder {
+      @apply w-full h-full flex justify-center items-center bg-gray-300 relative inline-block; }
+    .gradio_interface[theme="huggingface"] .input_image .edit_button {
+      @apply absolute top-1 right-1 bg-indigo-500 text-white px-2 py-1; }
+    .gradio_interface[theme="huggingface"] .input_image .image_editor {
+      @apply fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-50 z-40 flex flex-col justify-center items-center; }
+      .gradio_interface[theme="huggingface"] .input_image .image_editor .image_editor_buttons {
+        width: 800px;
+        @apply flex justify-end gap-1; }
+        .gradio_interface[theme="huggingface"] .input_image .image_editor .image_editor_buttons button {
+          @apply px-2 py-1 text-xl bg-black text-white font-semibold rounded-t; }
+      .gradio_interface[theme="huggingface"] .input_image .image_editor .tui-image-editor-header-buttons {
+        @apply hidden; }
+      .gradio_interface[theme="huggingface"] .input_image .image_editor .tui-colorpicker-palette-button {
+        width: 12px;
+        height: 12px; }
+    .gradio_interface[theme="huggingface"] .input_image .image_preview,
+    .gradio_interface[theme="huggingface"] .input_image video {
+      @apply w-full h-full object-contain; }
+    .gradio_interface[theme="huggingface"] .input_image .sketch > div {
+      @apply bg-white; }
+    .gradio_interface[theme="huggingface"] .input_image .snapshot {
+      @apply absolute bottom-0 w-full bg-white bg-opacity-90 py-3 font-bold text-lg text-center; }
+    .gradio_interface[theme="huggingface"] .input_image .interpretation {
+      @apply w-full h-full absolute top-0 left-0 flex justify-center items-center opacity-90 hover:opacity-20 transition; }
+  .gradio_interface[theme="huggingface"] .input_image_example {
+    @apply h-24; }
+  .gradio_interface[theme="huggingface"] .input_radio {
+    @apply flex flex-wrap gap-2; }
+    .gradio_interface[theme="huggingface"] .input_radio .radio_item {
+      @apply border bg-gradient-to-t from-gray-100 to-gray-50 text-gray-600 py-1.5 px-3 hover:to-gray-100 font-semibold rounded cursor-pointer flex items-center gap-1; }
+    .gradio_interface[theme="huggingface"] .input_radio .radio_item.selected {
+      @apply text-indigo-500; }
+    .gradio_interface[theme="huggingface"] .input_radio .radio_circle {
+      @apply w-4 h-4 bg-white rounded-full box-border; }
+    .gradio_interface[theme="huggingface"] .input_radio .selected .radio_circle {
+      @apply border-4 border-indigo-600; }
+  .gradio_interface[theme="huggingface"] .input_checkbox_group {
+    @apply flex flex-wrap gap-2; }
+    .gradio_interface[theme="huggingface"] .input_checkbox_group .checkbox_item {
+      @apply border bg-gradient-to-t from-gray-100 to-gray-50 text-gray-600 py-1.5 px-3 hover:to-gray-100 font-semibold rounded cursor-pointer flex items-center gap-1; }
+    .gradio_interface[theme="huggingface"] .input_checkbox_group .checkbox_item.selected {
+      @apply text-indigo-500; }
+    .gradio_interface[theme="huggingface"] .input_checkbox_group .checkbox {
+      @apply w-4 h-4 bg-white rounded p-1; }
+      .gradio_interface[theme="huggingface"] .input_checkbox_group .checkbox .check {
+        @apply hidden; }
+    .gradio_interface[theme="huggingface"] .input_checkbox_group .selected .checkbox {
+      @apply bg-indigo-600; }
+      .gradio_interface[theme="huggingface"] .input_checkbox_group .selected .checkbox .check {
+        @apply block; }
+    .gradio_interface[theme="huggingface"] .input_checkbox_group .check line {
+      stroke: white;
+      stroke-width: 4;
+      stroke-linecap: round; }
+    .gradio_interface[theme="huggingface"] .input_checkbox_group .interpretation {
+      @apply flex; }
+      .gradio_interface[theme="huggingface"] .input_checkbox_group .interpretation .interpretation_box {
+        @apply flex-grow h-4 w-4; }
+      .gradio_interface[theme="huggingface"] .input_checkbox_group .interpretation .interpret_check {
+        @apply w-full h-full; }
+      .gradio_interface[theme="huggingface"] .input_checkbox_group .interpretation .interpret_check line {
+        stroke: gray;
+        stroke-width: 4;
+        stroke-linecap: round; }
+  .gradio_interface[theme="huggingface"] .input_checkbox {
+    @apply flex flex-wrap gap-2; }
+    .gradio_interface[theme="huggingface"] .input_checkbox .checkbox_item {
+      @apply border bg-gradient-to-t from-gray-100 to-gray-50 text-gray-600 py-1.5 px-3 hover:to-gray-100 font-semibold rounded cursor-pointer flex items-center gap-1; }
+    .gradio_interface[theme="huggingface"] .input_checkbox .checkbox_item.selected {
+      @apply text-indigo-500; }
+    .gradio_interface[theme="huggingface"] .input_checkbox .checkbox {
+      @apply w-4 h-4 bg-white rounded p-1; }
+      .gradio_interface[theme="huggingface"] .input_checkbox .checkbox .check {
+        @apply hidden; }
+    .gradio_interface[theme="huggingface"] .input_checkbox .selected .checkbox {
+      @apply bg-indigo-600; }
+      .gradio_interface[theme="huggingface"] .input_checkbox .selected .checkbox .check {
+        @apply block; }
+    .gradio_interface[theme="huggingface"] .input_checkbox .check line {
+      stroke: white;
+      stroke-width: 4;
+      stroke-linecap: round; }
+    .gradio_interface[theme="huggingface"] .input_checkbox .interpretation {
+      @apply flex; }
+      .gradio_interface[theme="huggingface"] .input_checkbox .interpretation .interpretation_box {
+        @apply flex-grow h-4 w-4; }
+      .gradio_interface[theme="huggingface"] .input_checkbox .interpretation .interpret_check {
+        @apply w-full h-full; }
+      .gradio_interface[theme="huggingface"] .input_checkbox .interpretation .interpret_check line {
+        stroke: gray;
+        stroke-width: 4;
+        stroke-linecap: round; }
+  .gradio_interface[theme="huggingface"] .input_dropdown {
+    @apply inline-block relative; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .selector {
+      @apply border bg-gradient-to-t from-gray-100 to-gray-50 text-gray-600 py-1.5 px-3 hover:to-gray-100 font-semibold rounded inline-flex items-center; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .current {
+      @apply mr-1; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .caret {
+      @apply fill-current h-4 w-4; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .dropdown_menu {
+      @apply absolute hidden text-gray-700 pt-1 max-h-80 overflow-y-auto z-10; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .dropdown_item:first-child {
+      @apply rounded-t; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .dropdown_item {
+      @apply bg-gray-50 hover:bg-gray-400 hover:text-gray-50 py-2 px-4 block whitespace-nowrap cursor-pointer; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .dropdown_item:last-child {
+      @apply rounded-b; }
+    .gradio_interface[theme="huggingface"] .input_dropdown :hover .dropdown_menu {
+      @apply block; }
+    .gradio_interface[theme="huggingface"] .input_dropdown .interpretation_box {
+      @apply p-1; }
+  .gradio_interface[theme="huggingface"] .input_slider {
+    @apply text-center; }
+    .gradio_interface[theme="huggingface"] .input_slider .range {
+      @apply w-full appearance-none bg-gray-100 hover:bg-gray-100 transition rounded-full h-4 border; }
+    .gradio_interface[theme="huggingface"] .input_slider .range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      @apply appearance-none w-5 h-5 bg-indigo-500 rounded-full cursor-pointer shadow; }
+    .gradio_interface[theme="huggingface"] .input_slider .range::-moz-range-thumb {
+      @apply appearance-none w-5 h-5 bg-indigo-500 rounded-full cursor-pointer shadow; }
+    .gradio_interface[theme="huggingface"] .input_slider .value {
+      @apply inline-block mx-auto mt-1 px-2 py-0.5 bg-gray-100 text-gray-700 rounded shadow-inner; }
+    .gradio_interface[theme="huggingface"] .input_slider .interpret_range {
+      @apply flex h-6; }
+      .gradio_interface[theme="huggingface"] .input_slider .interpret_range div {
+        @apply flex-grow; }
+  .gradio_interface[theme="huggingface"] .input_audio .audio-react-recorder {
+    @apply hidden; }
+  .gradio_interface[theme="huggingface"] .input_audio .start {
+    @apply bg-gradient-to-t from-gray-100 to-gray-50 text-gray-600 py-1.5 px-3 hover:to-gray-100 font-semibold rounded; }
+  .gradio_interface[theme="huggingface"] .input_audio .stop {
+    @apply bg-gradient-to-t from-red-200 to-red-50 text-red-600 py-1.5 px-3 hover:to-gray-100 font-semibold rounded; }
+  .gradio_interface[theme="huggingface"] .input_audio audio {
+    @apply w-full; }
+    .gradio_interface[theme="huggingface"] .input_audio audio .interpret_range {
+      @apply flex h-4; }
+      .gradio_interface[theme="huggingface"] .input_audio audio .interpret_range div {
+        @apply flex-grow h-full; }
+  .gradio_interface[theme="huggingface"] .input_video {
+    @apply w-full h-80; }
+    .gradio_interface[theme="huggingface"] .input_video .upload_zone {
+      @apply border-8 border-gray-300 border-dashed w-full h-full flex justify-center items-center text-3xl text-gray-400 text-center cursor-pointer leading-10; }
+    .gradio_interface[theme="huggingface"] .input_video .video_preview_holder {
+      @apply w-full h-full flex justify-center items-center bg-gray-200; }
+    .gradio_interface[theme="huggingface"] .input_video .video_preview {
+      @apply w-full h-full object-contain; }
+  .gradio_interface[theme="huggingface"] .input_file {
+    @apply w-full h-80; }
+    .gradio_interface[theme="huggingface"] .input_file .upload_zone {
+      @apply border-8 border-gray-300 border-dashed w-full h-full flex justify-center items-center text-3xl text-gray-400 text-center cursor-pointer leading-10; }
+    .gradio_interface[theme="huggingface"] .input_file .file_preview_holder {
+      @apply w-full h-full flex flex-col justify-center items-center relative inline-block; }
+    .gradio_interface[theme="huggingface"] .input_file .file_name {
+      @apply text-6xl p-6; }
+    .gradio_interface[theme="huggingface"] .input_file .file_size {
+      @apply text-2xl p-2; }
+  .gradio_interface[theme="huggingface"] .output_text {
+    word-break: break-word;
+    @apply w-full p-3 border rounded-lg shadow-inner outline-none focus:ring-1 focus:ring-inset focus:ring-indigo-200 focus:shadow-inner whitespace-pre-wrap; }
+  .gradio_interface[theme="huggingface"] .output_label .output_class {
+    @apply hidden; }
+  .gradio_interface[theme="huggingface"] .output_label .confidence_intervals {
+    @apply flex text-xl; }
+  .gradio_interface[theme="huggingface"] .output_label .labels {
+    @apply mr-1; }
+  .gradio_interface[theme="huggingface"] .output_label .confidences {
+    @apply flex flex-grow flex-col items-baseline; }
+  .gradio_interface[theme="huggingface"] .output_label .label {
+    @apply overflow-hidden whitespace-nowrap h-7 mb-1 overflow-ellipsis text-right; }
+  .gradio_interface[theme="huggingface"] .output_label .confidence {
+    @apply bg-gradient-to-r from-indigo-200 to-indigo-500 rounded text-white flex justify-end overflow-hidden whitespace-nowrap h-7 mb-1 px-1;
+    color: transparent; }
+  .gradio_interface[theme="huggingface"] .output_image {
+    @apply w-full h-80; }
+    .gradio_interface[theme="huggingface"] .output_image .image_preview_holder {
+      @apply w-full h-full flex justify-center items-center bg-gray-200 relative inline-block; }
+    .gradio_interface[theme="huggingface"] .output_image .image_preview,
+    .gradio_interface[theme="huggingface"] .output_image video {
+      @apply w-full h-full object-contain; }
+  .gradio_interface[theme="huggingface"] .output_audio audio {
+    @apply w-full border-2 border-gray-300 rounded; }
+  .gradio_interface[theme="huggingface"] .output_highlightedtext .category_legend {
+    @apply flex flex-wrap gap-4 mb-2; }
+    .gradio_interface[theme="huggingface"] .output_highlightedtext .category_legend .category-label {
+      @apply flex gap-2; }
+    .gradio_interface[theme="huggingface"] .output_highlightedtext .category_legend .colorbox {
+      @apply w-6; }
+  .gradio_interface[theme="huggingface"] .output_keyvalues table {
+    @apply bg-white; }
+    .gradio_interface[theme="huggingface"] .output_keyvalues table thead {
+      @apply font-bold; }
+    .gradio_interface[theme="huggingface"] .output_keyvalues table td,
+    .gradio_interface[theme="huggingface"] .output_keyvalues table th {
+      @apply p-2; }
+  .gradio_interface[theme="huggingface"] .output_video {
+    @apply w-full h-80 object-contain flex justify-center; }
+    .gradio_interface[theme="huggingface"] .output_video video {
+      @apply h-full; }
+  .gradio_interface[theme="huggingface"] .output_file {
+    @apply w-full h-80; }
+    .gradio_interface[theme="huggingface"] .output_file .file_display {
+      @apply w-full h-full flex flex-col justify-center items-center relative inline-block; }
+    .gradio_interface[theme="huggingface"] .output_file .file_name {
+      @apply text-6xl p-6; }
+    .gradio_interface[theme="huggingface"] .output_file .file_size {
+      @apply text-2xl p-2; }
+  .gradio_interface[theme="huggingface"] .output_dataframe table thead {
+    @apply font-bold border-gray-200 border-b-2; }
+  .gradio_interface[theme="huggingface"] .output_dataframe table th {
+    @apply transition cursor-pointer; }
+  .gradio_interface[theme="huggingface"] .output_dataframe table th:hover {
+    @apply bg-gray-200; }
+  .gradio_interface[theme="huggingface"] .output_dataframe table td, .gradio_interface[theme="huggingface"] .output_dataframe table th {
+    @apply px-4; }
+  .gradio_interface[theme="huggingface"] .output_dataframe .pages {
+    @apply flex gap-1 items-center; }
+  .gradio_interface[theme="huggingface"] .output_dataframe .page {
+    @apply px-2 py-1 bg-gray-200; }
+  .gradio_interface[theme="huggingface"] .output_dataframe .page.selected {
+    @apply bg-gray-300; }
+  .gradio_interface[theme="huggingface"] .output_carousel {
+    @apply flex flex-col gap-2; }
+    .gradio_interface[theme="huggingface"] .output_carousel .carousel_control {
+      @apply flex gap-4 justify-center items-center mt-4; }
+      .gradio_interface[theme="huggingface"] .output_carousel .carousel_control .carousel_index {
+        @apply text-2xl font-semibold; }
+
+/*# sourceMappingURL=huggingface.css.map */
