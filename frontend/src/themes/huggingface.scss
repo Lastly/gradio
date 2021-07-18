@@ -35,7 +35,7 @@
         @apply flex items-center text-sm text-gray-700 mb-1.5;
     }
     .panel_button {
-        @apply shadow-sm font-semibold border flex-grow p-3 rounded-lg transition bg-gradient-to-b from-gray-50 hover:from-gray-100 to-gray-100 focus:ring-offset-indigo-300;
+        @apply shadow-sm font-semibold border flex-grow p-3 transition bg-gradient-to-b from-gray-50 hover:from-gray-100 to-red-100 focus:ring-offset-indigo-300;
     }
     .panel_buttons {
         @apply flex gap-4 my-4;
